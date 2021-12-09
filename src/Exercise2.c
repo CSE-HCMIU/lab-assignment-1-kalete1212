@@ -27,23 +27,15 @@ int main(int argc, char *argv[]) {
 	}
 	//Your codes here
 	int n, max, min;
-	printf(" Input: ");
-	scanf("%d", &n);
-	max = n;
-	min = n;
-	while (n!=0)
-	{
-		if (max < n)
-			max = n;
-		if (min > n)
-			min = n;
-		scanf("%d", &n);
+	max = testcase[0];
+	min = testcase[0];
+	for(int j = 1; j <= i; j++){
+		if (max < testcase[j])
+			max = testcase[j];
+		if (min > testcase[j])
+			min = testcase[j];
 	}
-	printf("max: %d\n", max);
-	printf("min: %d\n", min);
-	float ave = (max + min)*1.0 / 2;
-	printf("ave %f", ave);
-	system("pause");
-
+	printf("Max: %d\n", max);
+	printf("Min: %d\n", min);
 	return 0;
 }
